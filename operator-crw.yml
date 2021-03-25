@@ -1,0 +1,140 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: Subscription
+metadata:
+  selfLink: >-
+    /apis/operators.coreos.com/v1alpha1/namespaces/openshift-workspaces/subscriptions/codeready-workspaces
+  resourceVersion: "2697262"
+  name: codeready-workspaces
+  uid: f33f6583-e190-41b9-85aa-61d83699936b
+  creationTimestamp: "2021-03-25T09:23:51Z"
+  generation: 1
+  managedFields:
+    - apiVersion: operators.coreos.com/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        "f:spec":
+          .: {}
+          "f:channel": {}
+          "f:installPlanApproval": {}
+          "f:name": {}
+          "f:source": {}
+          "f:sourceNamespace": {}
+          "f:startingCSV": {}
+      manager: Mozilla
+      operation: Update
+      time: "2021-03-25T09:23:51Z"
+    - apiVersion: operators.coreos.com/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        "f:metadata":
+          "f:labels":
+            .: {}
+            "f:operators.coreos.com/codeready-workspaces.openshift-workspaces":
+              {}
+      manager: olm
+      operation: Update
+      time: "2021-03-25T09:23:51Z"
+    - apiVersion: operators.coreos.com/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        "f:spec":
+          "f:config":
+            .: {}
+            "f:resources": {}
+        "f:status":
+          "f:installedCSV": {}
+          "f:currentCSV": {}
+          "f:catalogHealth": {}
+          "f:installPlanRef":
+            .: {}
+            "f:apiVersion": {}
+            "f:kind": {}
+            "f:name": {}
+            "f:namespace": {}
+            "f:resourceVersion": {}
+            "f:uid": {}
+          "f:installPlanGeneration": {}
+          "f:conditions": {}
+          .: {}
+          "f:installplan":
+            .: {}
+            "f:apiVersion": {}
+            "f:kind": {}
+            "f:name": {}
+            "f:uuid": {}
+          "f:lastUpdated": {}
+          "f:state": {}
+      manager: catalog
+      operation: Update
+      time: "2021-03-25T09:24:25Z"
+  namespace: openshift-workspaces
+  labels:
+    operators.coreos.com/codeready-workspaces.openshift-workspaces: ""
+spec:
+  channel: latest
+  installPlanApproval: Automatic
+  name: codeready-workspaces
+  source: redhat-operators
+  sourceNamespace: openshift-marketplace
+  startingCSV: crwoperator.v2.7.0
+status:
+  installplan:
+    apiVersion: operators.coreos.com/v1alpha1
+    kind: InstallPlan
+    name: install-w255x
+    uuid: 47f170bc-8a22-41b5-89b5-bc627120d12e
+  lastUpdated: "2021-03-25T09:24:25Z"
+  installedCSV: crwoperator.v2.7.0
+  currentCSV: crwoperator.v2.7.0
+  installPlanRef:
+    apiVersion: operators.coreos.com/v1alpha1
+    kind: InstallPlan
+    name: install-w255x
+    namespace: openshift-workspaces
+    resourceVersion: "2696950"
+    uid: 47f170bc-8a22-41b5-89b5-bc627120d12e
+  state: AtLatestKnown
+  catalogHealth:
+    - catalogSourceRef:
+        apiVersion: operators.coreos.com/v1alpha1
+        kind: CatalogSource
+        name: certified-operators
+        namespace: openshift-marketplace
+        resourceVersion: "2694537"
+        uid: 4a07aba3-1325-4322-a8d9-ca741cd68e4d
+      healthy: true
+      lastUpdated: "2021-03-25T09:23:51Z"
+    - catalogSourceRef:
+        apiVersion: operators.coreos.com/v1alpha1
+        kind: CatalogSource
+        name: community-operators
+        namespace: openshift-marketplace
+        resourceVersion: "2695045"
+        uid: 575df1bd-58cb-435a-981a-8ddffe0ab3c7
+      healthy: true
+      lastUpdated: "2021-03-25T09:23:51Z"
+    - catalogSourceRef:
+        apiVersion: operators.coreos.com/v1alpha1
+        kind: CatalogSource
+        name: redhat-marketplace
+        namespace: openshift-marketplace
+        resourceVersion: "2695156"
+        uid: dc785063-8f49-457b-9c88-c9868811349c
+      healthy: true
+      lastUpdated: "2021-03-25T09:23:51Z"
+    - catalogSourceRef:
+        apiVersion: operators.coreos.com/v1alpha1
+        kind: CatalogSource
+        name: redhat-operators
+        namespace: openshift-marketplace
+        resourceVersion: "2695212"
+        uid: 0378f09b-8eb2-470b-9e80-f34a38905721
+      healthy: true
+      lastUpdated: "2021-03-25T09:23:51Z"
+  conditions:
+    - lastTransitionTime: "2021-03-25T09:23:51Z"
+      message: all available catalogsources are healthy
+      reason: AllCatalogSourcesHealthy
+      status: "False"
+      type: CatalogSourcesUnhealthy
+  installPlanGeneration: 2

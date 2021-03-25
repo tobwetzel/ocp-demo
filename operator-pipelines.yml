@@ -1,0 +1,139 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: Subscription
+metadata:
+  selfLink: >-
+    /apis/operators.coreos.com/v1alpha1/namespaces/openshift-operators/subscriptions/openshift-pipelines-operator-rh
+  resourceVersion: '2702990'
+  name: openshift-pipelines-operator-rh
+  uid: 0075b9e5-c162-496c-a816-475c024814d0
+  creationTimestamp: '2021-03-25T09:40:58Z'
+  generation: 1
+  managedFields:
+    - apiVersion: operators.coreos.com/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:spec':
+          .: {}
+          'f:channel': {}
+          'f:installPlanApproval': {}
+          'f:name': {}
+          'f:source': {}
+          'f:sourceNamespace': {}
+          'f:startingCSV': {}
+      manager: Mozilla
+      operation: Update
+      time: '2021-03-25T09:40:58Z'
+    - apiVersion: operators.coreos.com/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:metadata':
+          'f:labels':
+            .: {}
+            'f:operators.coreos.com/openshift-pipelines-operator-rh.openshift-operators': {}
+      manager: olm
+      operation: Update
+      time: '2021-03-25T09:40:58Z'
+    - apiVersion: operators.coreos.com/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:spec':
+          'f:config':
+            .: {}
+            'f:resources': {}
+        'f:status':
+          'f:installedCSV': {}
+          'f:currentCSV': {}
+          'f:catalogHealth': {}
+          'f:installPlanRef':
+            .: {}
+            'f:apiVersion': {}
+            'f:kind': {}
+            'f:name': {}
+            'f:namespace': {}
+            'f:resourceVersion': {}
+            'f:uid': {}
+          'f:installPlanGeneration': {}
+          'f:conditions': {}
+          .: {}
+          'f:installplan':
+            .: {}
+            'f:apiVersion': {}
+            'f:kind': {}
+            'f:name': {}
+            'f:uuid': {}
+          'f:lastUpdated': {}
+          'f:state': {}
+      manager: catalog
+      operation: Update
+      time: '2021-03-25T09:41:12Z'
+  namespace: openshift-operators
+  labels:
+    operators.coreos.com/openshift-pipelines-operator-rh.openshift-operators: ''
+spec:
+  channel: stable
+  installPlanApproval: Automatic
+  name: openshift-pipelines-operator-rh
+  source: redhat-operators
+  sourceNamespace: openshift-marketplace
+  startingCSV: redhat-openshift-pipelines-operator.v1.2.3
+status:
+  installplan:
+    apiVersion: operators.coreos.com/v1alpha1
+    kind: InstallPlan
+    name: install-fks4m
+    uuid: d97c0ae8-c63c-470f-ba49-b825f6260354
+  lastUpdated: '2021-03-25T09:41:11Z'
+  installedCSV: redhat-openshift-pipelines-operator.v1.2.3
+  currentCSV: redhat-openshift-pipelines-operator.v1.2.3
+  installPlanRef:
+    apiVersion: operators.coreos.com/v1alpha1
+    kind: InstallPlan
+    name: install-fks4m
+    namespace: openshift-operators
+    resourceVersion: '2702838'
+    uid: d97c0ae8-c63c-470f-ba49-b825f6260354
+  state: AtLatestKnown
+  catalogHealth:
+    - catalogSourceRef:
+        apiVersion: operators.coreos.com/v1alpha1
+        kind: CatalogSource
+        name: certified-operators
+        namespace: openshift-marketplace
+        resourceVersion: '2700214'
+        uid: 4a07aba3-1325-4322-a8d9-ca741cd68e4d
+      healthy: true
+      lastUpdated: '2021-03-25T09:40:58Z'
+    - catalogSourceRef:
+        apiVersion: operators.coreos.com/v1alpha1
+        kind: CatalogSource
+        name: community-operators
+        namespace: openshift-marketplace
+        resourceVersion: '2702347'
+        uid: 575df1bd-58cb-435a-981a-8ddffe0ab3c7
+      healthy: true
+      lastUpdated: '2021-03-25T09:40:58Z'
+    - catalogSourceRef:
+        apiVersion: operators.coreos.com/v1alpha1
+        kind: CatalogSource
+        name: redhat-marketplace
+        namespace: openshift-marketplace
+        resourceVersion: '2700213'
+        uid: dc785063-8f49-457b-9c88-c9868811349c
+      healthy: true
+      lastUpdated: '2021-03-25T09:40:58Z'
+    - catalogSourceRef:
+        apiVersion: operators.coreos.com/v1alpha1
+        kind: CatalogSource
+        name: redhat-operators
+        namespace: openshift-marketplace
+        resourceVersion: '2700221'
+        uid: 0378f09b-8eb2-470b-9e80-f34a38905721
+      healthy: true
+      lastUpdated: '2021-03-25T09:40:58Z'
+  conditions:
+    - lastTransitionTime: '2021-03-25T09:40:58Z'
+      message: all available catalogsources are healthy
+      reason: AllCatalogSourcesHealthy
+      status: 'False'
+      type: CatalogSourcesUnhealthy
+  installPlanGeneration: 1
